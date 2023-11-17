@@ -1,0 +1,26 @@
+.row
+    max-width: 114rem
+    margin: 0 auto
+    &:not(:last-child)
+        margin-bottom: 8rem
+    @include clearfix
+    @include respond(tab-land)
+        max-width: 90.1rem
+
+.col-1-of-2
+    &:not(:last-child)
+        margin-right: 6rem
+    width: calc((100% - #{6rem}) / 2)
+    float: left
+
+.col-1-of-3
+    &:not(:last-child)
+        margin-right: 6rem
+    width: calc((100% - 2 * #{6rem}) / 3)
+    float: left
+
+.col-1-of-4
+    &:not(:last-child)
+        margin-right: 6rem
+    width: calc((100% - 3 * #{6rem}) / 4)
+    float: left

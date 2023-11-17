@@ -1,0 +1,96 @@
+.card-tour
+    height: 50rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    &__side
+        height: 50rem
+        transition: .7s all ease-out
+        color: white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow
+        border-radius: .3rem
+        overflow: hidden
+        &_front
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(120deg, ($color-brown-light), ($color-brown-dark))
+
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+    &__img
+        &_1
+            background: $color-brown-light url(../img/Photo-card-1.png) center / cover no-repeat
+            background-blend-mode: hard-light
+            height: 21rem
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_2
+            background: $color-brown-light url(../img/Photo-card-2.png) center / cover no-repeat
+            background-blend-mode: hard-light
+            height: 21rem
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_3
+            background: $color-brown-light url(../img/Photo-card-3.png) center / cover no-repeat
+            background-blend-mode: hard-light
+            height: 21rem
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__title
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 17rem
+        right: 0rem
+    &__span
+        background: linear-gradient(90deg, ($color-brown-light),($color-brown-dark))
+        padding: 1rem 2rem .3rem 2rem
+        &_1
+        &_2
+            position: absolute
+            top: 3.3rem
+            right: 0rem
+            padding-bottom: 1rem
+            padding-top: 0rem
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 80%
+            text-align: center
+            li
+                font-size: $font-size-paragraph
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                display: inline-block
+                &:not(:last-child)
+                    margin-bottom: 2rem
+
+    &__back-side-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 8rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        color: $color-white
+        &_1
+            font-size: $font-size-paragraph
+            font-weight: 300
+        &_2
+            font-size: 6rem
+            font-weight: 500
+.card-tour__button
+    z-index: 0
