@@ -1,3 +1,3 @@
 Balloons
 
-https://roveqa.github.io/balloons/
+https://roveqa.github.io/Balloons/
